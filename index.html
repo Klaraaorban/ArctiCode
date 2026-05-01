@@ -400,23 +400,31 @@
       </p>
     </div>
 
-    <!-- Fig 2 -->
     <div style="margin-top:3rem;">
       <h3 class="title is-4 has-text-centered">DA3 Depth Estimation</h3>
-      <div class="columns">
-        <div class="column">
-          <figure><img src="./static/images/da3_depth_comparison.jpeg" alt="DA3 depth comparison" class="figure-img"></figure>
-        </div>
-        <div class="column">
-          <figure><img src="./static/images/da3_white.jpeg" alt="DA3 reconstruction" class="figure-img"></figure>
+      
+      <!-- First Image: Wide -->
+      <div class="columns is-centered">
+        <div class="column is-eight-fifths">
+          <figure class="image">
+            <img src="./static/images/da3_depth_comparison.jpeg" alt="DA3 depth comparison">
+          </figure>
         </div>
       </div>
-      <p class="figure-caption">
-        <b>Fig. 2</b> — (Left) Original ice image alongside its DA3 depth map. (Right) Example 3D reconstruction from four enhanced images using estimated camera poses.
+
+      <!-- Second Image: Square -->
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <figure class="image">
+            <img src="./static/images/da3_white.jpeg" alt="DA3 reconstruction">
+          </figure>
+        </div>
+      </div>
+
+      <p class="has-text-centered" style="margin-top: 1rem;">
+        <b>Fig. 2</b> — (Top) Original ice image alongside its DA3 depth map. (Bottom) Example 3D reconstruction from four enhanced images using estimated camera poses.
       </p>
     </div>
-  </div>
-</section>
 
 <hr class="section-hr">
 
