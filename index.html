@@ -583,6 +583,73 @@
 
 <hr class="section-hr">
 
+<hr class="section-hr">
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <div style="margin-bottom:1rem;">
+          <span class="tag is-info is-light is-medium" style="font-family:'Google Sans',sans-serif; font-weight:500;">
+            Work in progress
+          </span>
+        </div>
+
+        <h2 class="title is-3">Future Work</h2>
+        <p style="color:#666; line-height:1.75; margin-bottom:2.5rem;">
+          We are actively developing a synthetic data pipeline for under-ice environments
+          and plan to release a new open dataset later this year, extending HoloOcean with
+          richer ice morphology, wider environmental diversity, and tighter multimodal ground truth.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="columns is-multiline">
+      <div class="column is-half"><div class="method-card">
+        <h4>AI-generated ice meshes</h4>
+        <p>Generative mesh pipelines (Meshy, Pixal3D) produce diverse ice morphologies — from smooth congelation ice to fractured pressure ridges — expanding training scenarios without new field expeditions.</p>
+      </div></div>
+      <div class="column is-half"><div class="method-card">
+        <h4>Above + below integration</h4>
+        <p>Drone-based RGB and LiDAR surveys fused with underwater sonar to build full-thickness ice models, simultaneously capturing both draft and freeboard.</p>
+      </div></div>
+      <div class="column is-half"><div class="method-card">
+        <h4>Foundation model fine-tuning</h4>
+        <p>Synthetic multimodal data used to fine-tune vision foundation models against the photometric and scattering effects inherent to under-ice environments.</p>
+      </div></div>
+      <div class="column is-half"><div class="method-card">
+        <h4>Real-time SLAM pipeline</h4>
+        <p>A hybrid acoustic-visual SLAM system where sonar constrains global drift and optical flow refines local trajectory estimates, targeting deployment on embedded ROV hardware.</p>
+      </div></div>
+    </div>
+
+    <div style="margin-top:3rem;">
+      <h3 class="title is-4 has-text-centered">Synthetic Pipeline Preview</h3>
+      <div class="columns">
+        <div class="column is-half">
+          <figure>
+            <img src="./static/images/full_ice.png" alt="HoloOcean synthetic ice environment" class="figure-img">
+          </figure>
+        </div>
+        <div class="column is-half">
+          <figure>
+            <img src="./static/images/under_ice.png" alt="HoloOcean synthetic ice reconstruction" class="figure-img">
+          </figure>
+        </div>
+      </div>
+      <p class="figure-caption">
+        <b>Fig. X</b> — HoloOcean synthetic under-ice environments generated from sonar-derived and AI-generated ice geometry,
+        used for controlled multimodal dataset generation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-hr">
+
 <!-- ── BIBTEX ── -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
