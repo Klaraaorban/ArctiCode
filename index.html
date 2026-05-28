@@ -580,57 +580,28 @@
     </div>
   </div>
 </section>
-
 <hr class="section-hr">
+
+<!-- ── FUTURE WORK ── -->
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
 
-        <div style="margin-bottom:1rem;">
-          <span class="tag is-info is-light is-medium" style="font-family:'Google Sans',sans-serif; font-weight:500;">
-            Work in progress
-          </span>
-        </div>
-
-        <h2 class="title is-3">Future Work</h2>
-        
-        <div class="content has-text-justified" style="max-width:720px; margin:0 auto 2.5rem auto;">
-          <p style="color:#666; line-height:1.75; margin-bottom:0.75rem;">
-            Our results highlight two complementary directions for future research: expanding the diversity
-            of synthetic training environments, and closing the gap between offline benchmarking and
-            real-time autonomous operation.
-          </p>
-          <p style="color:#666; line-height:1.75; margin-bottom:0;">
-            We are actively developing an extended synthetic pipeline and plan to release a new open
-            dataset later this year, incorporating a wider range of ice morphologies, environmental
-            conditions, and tightly registered multimodal ground truth.
-          </p>
-        </div>
-
-      </div>
+    <div style="text-align:center; margin-bottom:1rem;">
+      <span class="tag is-info is-light is-medium" style="font-family:'Google Sans',sans-serif; font-weight:500;">
+        Work in progress
+      </span>
     </div>
 
-    <div class="columns is-multiline">
-      <div class="column is-half"><div class="method-card">
-        <h4>AI-generated ice meshes</h4>
-        <p>Generative mesh pipelines (Meshy, Pixal3D) produce diverse ice morphologies on demand — from smooth congelation ice to heavily fractured pressure ridges — broadening training scenarios without requiring additional field expeditions.</p>
-      </div></div>
-      <div class="column is-half"><div class="method-card">
-        <h4>Full-thickness ice modelling</h4>
-        <p>Drone-based RGB and LiDAR surveys of the ice surface will be co-registered with underwater sonar to build cohesive full-thickness models, simultaneously capturing freeboard and draft for volume estimation and radiative transfer modelling.</p>
-      </div></div>
-      <div class="column is-half"><div class="method-card">
-        <h4>Foundation model fine-tuning</h4>
-        <p>Synthetic multimodal data will be used to fine-tune vision foundation models such as DA3 against the photometric scattering and texture-sparse conditions inherent to under-ice environments, addressing the sim-to-real gap observed in this benchmark.</p>
-      </div></div>
-      <div class="column is-half"><div class="method-card">
-        <h4>Real-time SLAM pipeline</h4>
-        <p>A hybrid acoustic-visual SLAM system in which sonar constrains global drift while optical flow refines local trajectory estimates, targeting a computationally efficient deployment on embedded ROV hardware at survey framerates.</p>
-      </div></div>
+    <h2 class="title is-3 has-text-centered">Future Work</h2>
+
+    <div class="content has-text-justified" style="max-width:720px; margin:0 auto;">
+      <p>Our results highlight two complementary directions for future research: expanding the diversity of synthetic training environments, and closing the gap between offline benchmarking and real-time autonomous operation.</p>
+      <p>We are actively developing an extended synthetic pipeline in HoloOcean and plan to release a new open dataset later this year. This involves generative mesh pipelines (Meshy, Pixal3D) to produce diverse ice morphologies on demand — from smooth congelation ice to heavily fractured pressure ridges — broadening training scenarios without requiring additional field expeditions.</p>
+      <p>Drone-based RGB and LiDAR surveys of the ice surface will be co-registered with underwater sonar to build cohesive full-thickness ice models, simultaneously capturing freeboard and draft for volume estimation and radiative transfer modelling. From a geometric perspective, the above-water surface can act as a guiding prior for camera pose estimation in regions where optical methods beneath the ice fail due to turbidity or featureless surfaces.</p>
+      <p>Synthetic multimodal data will be used to fine-tune vision foundation models such as DA3 against the photometric scattering and texture-sparse conditions inherent to under-ice environments, directly addressing the sim-to-real gap observed in this benchmark. Ultimately, we aim to translate this into a hybrid acoustic-visual SLAM pipeline, wherein sonar constrains global drift and optical flow refines local trajectory estimates, targeting computationally efficient deployment on embedded ROV hardware at survey framerates.</p>
     </div>
 
-    <div style="margin-top:3rem;">
+    <div style="margin-top:2.5rem;">
       <h3 class="title is-4 has-text-centered">Synthetic Pipeline Preview</h3>
 
       <div class="columns" style="margin-bottom:0;">
@@ -646,7 +617,7 @@
         </div>
       </div>
 
-      <div class="columns is-centered" style="margin-top:0.5rem;">
+      <div class="columns is-centered" style="margin-top:0.75rem;">
         <div class="column is-three-quarters">
           <figure>
             <img src="./static/images/ice_underside.png" alt="Drone camera view of ice underside" class="figure-img">
