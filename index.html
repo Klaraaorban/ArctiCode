@@ -583,8 +583,7 @@
 
 <hr class="section-hr">
 
-<hr class="section-hr">
-
+<!-- ── FUTURE WORK ── -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -597,10 +596,15 @@
         </div>
 
         <h2 class="title is-3">Future Work</h2>
+        <p style="color:#666; line-height:1.75; margin-bottom:0.75rem;">
+          Our results highlight two complementary directions for future research: expanding the diversity
+          of synthetic training environments, and closing the gap between offline benchmarking and
+          real-time autonomous operation.
+        </p>
         <p style="color:#666; line-height:1.75; margin-bottom:2.5rem;">
-          We are actively developing a synthetic data pipeline for under-ice environments
-          and plan to release a new open dataset later this year, extending HoloOcean with
-          richer ice morphology, wider environmental diversity, and tighter multimodal ground truth.
+          We are actively developing an extended synthetic pipeline and plan to release a new open
+          dataset later this year, incorporating a wider range of ice morphologies, environmental
+          conditions, and tightly registered multimodal ground truth.
         </p>
 
       </div>
@@ -609,39 +613,50 @@
     <div class="columns is-multiline">
       <div class="column is-half"><div class="method-card">
         <h4>AI-generated ice meshes</h4>
-        <p>Generative mesh pipelines (Meshy, Pixal3D) produce diverse ice morphologies — from smooth congelation ice to fractured pressure ridges — expanding training scenarios without new field expeditions.</p>
+        <p>Generative mesh pipelines (Meshy, Pixal3D) produce diverse ice morphologies on demand — from smooth congelation ice to heavily fractured pressure ridges — broadening training scenarios without requiring additional field expeditions.</p>
       </div></div>
       <div class="column is-half"><div class="method-card">
-        <h4>Above + below integration</h4>
-        <p>Drone-based RGB and LiDAR surveys fused with underwater sonar to build full-thickness ice models, simultaneously capturing both draft and freeboard.</p>
+        <h4>Full-thickness ice modelling</h4>
+        <p>Drone-based RGB and LiDAR surveys of the ice surface will be co-registered with underwater sonar to build cohesive full-thickness models, simultaneously capturing freeboard and draft for volume estimation and radiative transfer modelling.</p>
       </div></div>
       <div class="column is-half"><div class="method-card">
         <h4>Foundation model fine-tuning</h4>
-        <p>Synthetic multimodal data used to fine-tune vision foundation models against the photometric and scattering effects inherent to under-ice environments.</p>
+        <p>Synthetic multimodal data will be used to fine-tune vision foundation models such as DA3 against the photometric scattering and texture-sparse conditions inherent to under-ice environments, addressing the sim-to-real gap observed in this benchmark.</p>
       </div></div>
       <div class="column is-half"><div class="method-card">
         <h4>Real-time SLAM pipeline</h4>
-        <p>A hybrid acoustic-visual SLAM system where sonar constrains global drift and optical flow refines local trajectory estimates, targeting deployment on embedded ROV hardware.</p>
+        <p>A hybrid acoustic-visual SLAM system in which sonar constrains global drift while optical flow refines local trajectory estimates, targeting a computationally efficient deployment on embedded ROV hardware at survey framerates.</p>
       </div></div>
     </div>
 
     <div style="margin-top:3rem;">
       <h3 class="title is-4 has-text-centered">Synthetic Pipeline Preview</h3>
-      <div class="columns">
+
+      <div class="columns" style="margin-bottom:0;">
         <div class="column is-half">
           <figure>
-            <img src="./static/images/full_ice.png" alt="HoloOcean synthetic ice environment" class="figure-img">
+            <img src="./static/images/full_ice.png" alt="HoloOcean full ice structure" class="figure-img">
           </figure>
         </div>
         <div class="column is-half">
           <figure>
-            <img src="./static/images/under_ice.png" alt="HoloOcean synthetic ice reconstruction" class="figure-img">
+            <img src="./static/images/under_ice.png" alt="HoloOcean under-ice view" class="figure-img">
           </figure>
         </div>
       </div>
-      <p class="figure-caption">
-        <b>Fig. X</b> — HoloOcean synthetic under-ice environments generated from sonar-derived and AI-generated ice geometry,
-        used for controlled multimodal dataset generation.
+
+      <div class="columns is-centered" style="margin-top:0.5rem;">
+        <div class="column is-three-quarters">
+          <figure>
+            <img src="./static/images/ice_underside.png" alt="Drone camera view of ice underside" class="figure-img">
+          </figure>
+        </div>
+      </div>
+
+      <p class="figure-caption" style="margin-top:0.75rem;">
+        <b>Top left:</b> AI-generated composite ice structure rendered in HoloOcean, showing irregular above-water geometry and submerged draft.
+        <b>Top right:</b> Simulated under-ice ROV perspective with volumetric scattering and non-uniform light attenuation.
+        <b>Bottom:</b> Drone camera view of the ice underside, illustrating the above-water perspective used for full-thickness co-registration.
       </p>
     </div>
 
