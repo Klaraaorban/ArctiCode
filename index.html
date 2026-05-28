@@ -256,6 +256,27 @@
     footer.footer { background: #fafafa; padding: 2rem 1.5rem; }
     footer.footer .content p { color: #888; font-size: 0.87rem; }
     footer.footer a { color: #4a9dc5; }
+    .pipeline-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.pipeline-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.pipeline-card p {
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
   </style>
 </head>
 <body>
@@ -600,38 +621,45 @@
       <p>Drone-based RGB and LiDAR surveys of the ice surface will be co-registered with underwater sonar to build cohesive full-thickness ice models, simultaneously capturing freeboard and draft for volume estimation and radiative transfer modelling. From a geometric perspective, the above-water surface can act as a guiding prior for camera pose estimation in regions where optical methods beneath the ice fail due to turbidity or featureless surfaces.</p>
       <p>Synthetic multimodal data will be used to fine-tune vision foundation models such as DA3 against the photometric scattering and texture-sparse conditions inherent to under-ice environments, directly addressing the sim-to-real gap observed in this benchmark. Ultimately, we aim to translate this into a hybrid acoustic-visual SLAM pipeline, wherein sonar constrains global drift and optical flow refines local trajectory estimates, targeting computationally efficient deployment on embedded ROV hardware at survey framerates.</p>
     </div>
-
-    <div style="margin-top:2.5rem;">
-      <h3 class="title is-4 has-text-centered">Synthetic Pipeline Preview</h3>
-
 <div style="margin-top:2.5rem;">
-  <h3 class="title is-4 has-text-centered">Synthetic Pipeline Preview</h3>
+  <h3 class="title is-4 has-text-centered">
+    Synthetic Pipeline Preview
+  </h3>
 
-    <div class="columns is-vcentered">
-      <div class="column is-one-third">
-        <figure>
-          <img src="./static/images/full_ice.png" alt="HoloOcean full ice structure" class="figure-img">
-        </figure>
-      </div>
-      <div class="column is-one-third">
-        <figure>
-          <img src="./static/images/ice_underside.png" alt="ROV camera view of ice underside" class="figure-img">
-        </figure>
-      </div>
-      <div class="column is-one-third">
-        <figure>
-          <img src="./static/images/under_ice.png" alt="HoloOcean under-ice view" class="figure-img">
-        </figure>
+  <div class="columns">
+
+    <div class="column">
+      <div class="pipeline-card">
+        <img src="./static/images/full_ice.png" alt="">
+        <p>
+          <b>AI-generated composite iceberg</b> rendered in HoloOcean with
+          irregular above-water geometry and submerged draft.
+        </p>
       </div>
     </div>
 
-    <p class="figure-caption" style="margin-top:0.75rem;">
-      <b>Left:</b> AI-generated composite ice structure rendered in HoloOcean, showing irregular above-water geometry and submerged draft.
-      <b>Middle:</b> Simulated under-ice ROV perspective with volumetric scattering and non-uniform light attenuation.
-      <b>Right:</b> Drone camera view of the ice underside, illustrating the above-water perspective used for full-thickness co-registration.
-    </p>
-  </div>
+    <div class="column">
+      <div class="pipeline-card">
+        <img src="./static/images/ice_underside.png" alt="">
+        <p>
+          <b>Under-ice ROV perspective</b> with volumetric scattering and
+          non-uniform underwater attenuation.
+        </p>
+      </div>
+    </div>
 
+    <div class="column">
+      <div class="pipeline-card">
+        <img src="./static/images/under_ice.png" alt="">
+        <p>
+          <b>Drone/co-registration view</b> used for full-thickness geometric
+          alignment and reconstruction.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
   </div>
 </section>
 
